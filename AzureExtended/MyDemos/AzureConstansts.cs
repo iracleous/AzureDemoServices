@@ -13,7 +13,7 @@ namespace AzureExtended.MyDemos
         public static readonly string VaultUriString = "https://" + VaultName + ".vault.azure.net/";
 
 
-        public static readonly string _storageConnectionString = "DefaultEndpointsProtocol=https;AccountName=potatochips;AccountKey=SyOl8W8rfXwpiMp/TxsSxG6rpRU+mKCEGSn4dfMNjiBR59TzThaTI7gQTpihUhtxg+ss1Ls6s0Ma+ASttwrnbw==;EndpointSuffix=core.windows.net";
+        public static readonly string _storageConnectionString = "DefaultEndpointsProtocol=https;AccountName=potatochips;AccountKey=m4TO7yTd0BkY9/E4+TH+IWJhGgjGMyh1M4eXZAzyu111Dp7q+Fo4Lk3T1FSMJ4vJ3fSS3gAvSqjp+AStTNpiIA==;EndpointSuffix=core.windows.net";
         public static readonly string _containerName = "images";
         public static readonly string _fileName = "txtFile";
         // https://potatochips.blob.core.windows.net/images/340751895_3479940802290276_7283390250138615953_n.jpg
