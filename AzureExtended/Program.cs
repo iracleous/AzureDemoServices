@@ -1,6 +1,9 @@
 ﻿using AzureExtended.MyDemos;
 
-SasTokenDemo.SasDemo();
+await ClientIdDemo.DoWork();
+
+
+//SasTokenDemo.SasDemo();
 
 //await StorageExample.BlobStorageDemo();
 
@@ -14,13 +17,7 @@ SasTokenDemo.SasDemo();
 
 
 
- //
-// 
-
-//  
-
-//  
-// RedisWorking.Main(Array.Empty<string>());
+//   RedisWorking.Main(Array.Empty<string>());
 
 // await EventHubsDemo.Main(Array.Empty<string>());
 

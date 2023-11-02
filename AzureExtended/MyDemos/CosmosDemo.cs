@@ -20,7 +20,7 @@ internal class CosmosDemo
     Container? container;
 
 
-    public static async Task Main(string[] args)
+    public static async Task MainCosmos(string[] args)
     {
 
         try
@@ -53,8 +53,8 @@ internal class CosmosDemo
     public async Task CosmosAsync()
     {
         // Create a new instance of the Cosmos Client
-        cosmosClient = new CosmosClient(AzureConstansts.EndpointUri,
-            AzureConstansts.PrimaryKey);
+        cosmosClient = new CosmosClient(AzureConstants.EndpointUri,
+            AzureConstants.PrimaryKey);
 
         // Runs the CreateDatabaseAsync method
         await CreateDatabaseAsync();
@@ -63,7 +63,7 @@ internal class CosmosDemo
         await CreateContainerAsync();
 
 
-         await AddToContainer();
+        await AddToContainer();
 
         await Query("Papadopoulou");
         await Query("Guffy");
@@ -78,7 +78,7 @@ internal class CosmosDemo
         if (cosmosClient == null) { return; }
         // Create a new database using the cosmosClient
         database = await cosmosClient.CreateDatabaseIfNotExistsAsync(
-            AzureConstansts.databaseId);
+            AzureConstants.databaseId);
         Console.WriteLine("Created Database: {0}\n", database.Id);
     }
 
@@ -87,7 +87,7 @@ internal class CosmosDemo
         if (database == null) { return; }
         // Create a new container
         container = await database.CreateContainerIfNotExistsAsync(
-            AzureConstansts.containerId, "/Country");
+            AzureConstants.containerId, "/Country");
         Console.WriteLine("Created Container: {0}\n", container.Id);
     }
 
@@ -99,7 +99,6 @@ internal class CosmosDemo
         if (container == null) { return; }
         var customer1 = new Customer
         {
-
             FirstName = "Anna",
             LastName = "Papadopoulou",
             Country = "Greece",
@@ -111,7 +110,6 @@ internal class CosmosDemo
 
         var customer2 = new Customer
         {
-
             FirstName = "Donald",
             LastName = "Guffy",
             Country = "USA",
@@ -165,9 +163,6 @@ internal class CosmosDemo
         //    .Where(c => c.Country == "UK")
             .OrderBy(c => c.LastName);
 
-
-
-
         //Convert Query to Feed Enumerator
         using FeedIterator<Customer> linqFeed = linqQuery.ToFeedIterator();
         while (linqFeed.HasMoreResults) //Enumerator Result Pages
@@ -180,7 +175,6 @@ internal class CosmosDemo
             }
         }
     }
-
 }
 
 

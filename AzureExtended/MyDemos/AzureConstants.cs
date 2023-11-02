@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AzureExtended.MyDemos
 {
-    internal static class AzureConstansts
+    internal static class AzureConstants
     {
         public static readonly string VaultName = "az204vault-16978";
         public static readonly string MySecretName = "ExamplePassword";
@@ -20,6 +20,8 @@ namespace AzureExtended.MyDemos
 
 
         public static readonly string TenantId = "b1732512-60e5-48fb-92e8-8d6902ac1349";
+        public static readonly string ClientId = "04502bc8-91aa-4439-9a9b-cf92548907e2";
+
 
         public static readonly string _fileNameImage = "340751895_3479940802290276_7283390250138615953_n.jpg";
         public static readonly string _accountName = "potatochips";
@@ -39,6 +41,11 @@ namespace AzureExtended.MyDemos
         // The names of the database and container we will create
         public static readonly string databaseId = "Az204Database";
         public static readonly string containerId = "Az204Container";
+
+
+
+        public static readonly string RedisConnectionString =
+     "metroredis.redis.cache.windows.net:6380,password=yY1FngV4d9LF2RUM7Wd8HLrwyw4st9zvIAzCaGLac08=,ssl=True,abortConnect=False";
 
 
 

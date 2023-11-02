@@ -39,13 +39,13 @@ internal class StorageExample
 
         // Create a client that can authenticate with a connection string
         BlobServiceClient blobServiceClient =
-            new BlobServiceClient(AzureConstansts._storageConnectionString);
+            new BlobServiceClient(AzureConstants._storageConnectionString);
 
         //1. container
 
         // Create a unique name for the container
         string containerName = 
-            AzureConstansts._containerName + Guid.NewGuid().ToString();
+            AzureConstants._containerName + Guid.NewGuid().ToString();
 
         // Create the container and return a container client object
         BlobContainerClient containerClient = await 
@@ -59,7 +59,7 @@ internal class StorageExample
         //2. upload
         // Create a local file in the ./data/ directory for uploading and downloading
         string localPath = "./";
-        string fileName = AzureConstansts._fileName +
+        string fileName = AzureConstants._fileName +
             Guid.NewGuid().ToString() + ".txt";
         string localFilePath = Path.Combine(localPath, fileName);
 

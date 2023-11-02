@@ -27,12 +27,12 @@ internal class VaultDemo
 
     public static async Task ReadFromVaultAsync()
     {
-        var client = new SecretClient(new Uri(AzureConstansts.VaultUriString),
+        var client = new SecretClient(new Uri(AzureConstants.VaultUriString),
             new DefaultAzureCredential());
 
-          await client.SetSecretAsync( new KeyVaultSecret(AzureConstansts.MySecretName,"xxxxiiii"));
+          await client.SetSecretAsync( new KeyVaultSecret(AzureConstants.MySecretName,"xxxxiiii"));
 
-        KeyVaultSecret secret = await client.GetSecretAsync(AzureConstansts.MySecretName);
+        KeyVaultSecret secret = await client.GetSecretAsync(AzureConstants.MySecretName);
         string secretValue = secret.Value;
         Console.WriteLine(secretValue);
     }

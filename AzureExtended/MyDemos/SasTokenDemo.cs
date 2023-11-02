@@ -12,7 +12,7 @@ internal class SasTokenDemo
     public static void SasDemo()
     {
         BlobContainerClient container = new BlobContainerClient(
-            AzureConstansts._storageConnectionString,
+            AzureConstants._storageConnectionString,
             containerName);
 
         foreach (BlobItem blobItem in container.GetBlobs())
